@@ -1,0 +1,34 @@
+$focus-ring-box-shadow: none;
+$input-focus-border-color: inherit;
+
+@import "bootstrap-scss/functions";
+@import "bootstrap-scss/variables";
+@import "bootstrap-scss/maps";
+@import "bootstrap-scss/mixins";
+@import "bootstrap-scss/utilities";
+@import "bootstrap-scss/root";
+
+//@import "bootstrap-scss/bootstrap";
+#mmx-search-root {
+
+  @import "bootstrap-scss/reboot";
+  //@import "bootstrap-scss/grid";
+  //@import "bootstrap-scss/containers";
+  @import "bootstrap-scss/forms";
+  //@import "bootstrap-scss/pagination";
+  @import "bootstrap-scss/buttons";
+  //@import "bootstrap-scss/dropdown";
+  //@import "bootstrap-scss/type";
+  //@import "bootstrap-scss/alert";
+  //@import "bootstrap-scss/close";
+  //@import "bootstrap-scss/spinners";
+  @import "bootstrap-scss/transitions";
+  @import "bootstrap-scss/helpers";
+  @import "bootstrap-scss/utilities/api";
+}
+
+@import "search";
+@import "icons";
+@import "bootstrap-scss/modal";
+@import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
+@import "@vesp/mmx-frontend/assets/toast";

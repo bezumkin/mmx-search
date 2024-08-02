@@ -1,0 +1,67 @@
+{
+  "_api-CKyfD95E.js": {
+    "file": "assets/api-CKyfD95E.js",
+    "name": "api",
+    "imports": [
+      "_vue-hfjAzT99.js"
+    ]
+  },
+  "_vesp-HQBszzT3.js": {
+    "file": "assets/vesp-HQBszzT3.js",
+    "name": "vesp",
+    "imports": [
+      "_vue-bootstrap-CJ-2MBel.js",
+      "_vue-hfjAzT99.js",
+      "_vue-router-Cb_WVhdP.js",
+      "_api-CKyfD95E.js"
+    ]
+  },
+  "_vue-bootstrap-CJ-2MBel.js": {
+    "file": "assets/vue-bootstrap-CJ-2MBel.js",
+    "name": "vue-bootstrap",
+    "imports": [
+      "_vue-hfjAzT99.js"
+    ]
+  },
+  "_vue-hfjAzT99.js": {
+    "file": "assets/vue-hfjAzT99.js",
+    "name": "vue"
+  },
+  "_vue-router-Cb_WVhdP.js": {
+    "file": "assets/vue-router-Cb_WVhdP.js",
+    "name": "vue-router",
+    "imports": [
+      "_vue-hfjAzT99.js"
+    ]
+  },
+  "src/mgr.ts": {
+    "file": "assets/mgr-7tV1Buqc.js",
+    "name": "mgr",
+    "src": "src/mgr.ts",
+    "isEntry": true,
+    "imports": [
+      "_vue-hfjAzT99.js",
+      "_vue-router-Cb_WVhdP.js",
+      "_vesp-HQBszzT3.js",
+      "_vue-bootstrap-CJ-2MBel.js",
+      "_api-CKyfD95E.js"
+    ],
+    "css": [
+      "assets/mgr-DZFTxvnu.css"
+    ]
+  },
+  "src/web.ts": {
+    "file": "assets/web-CJjM8m1q.js",
+    "name": "web",
+    "src": "src/web.ts",
+    "isEntry": true,
+    "imports": [
+      "_vue-hfjAzT99.js",
+      "_api-CKyfD95E.js",
+      "_vue-bootstrap-CJ-2MBel.js"
+    ],
+    "css": [
+      "assets/web-CqL5p0yx.css"
+    ]
+  }
+}
