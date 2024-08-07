@@ -3,6 +3,9 @@
 $_tmp = [
     'menu_name' => 'mmxSearch',
     'menu_desc' => 'Удобный поиск',
+    'version' => [
+        'available' => 'доступна {version}',
+    ],
     'actions' => [
         'create' => 'Создать',
         'edit' => 'Изменить',

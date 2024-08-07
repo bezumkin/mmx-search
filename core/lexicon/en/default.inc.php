@@ -3,6 +3,9 @@
 $_tmp = [
     'menu_name' => 'mmxSearch',
     'menu_desc' => 'Convenient search',
+    'version' => [
+        'available' => '{version} available',
+    ],
     'actions' => [
         'create' => 'Create',
         'edit' => 'Edit',
