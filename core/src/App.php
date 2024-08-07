@@ -6,7 +6,7 @@ use DI\Bridge\Slim\Bridge;
 use DI\Container;
 use MMX\Database\Models\Resource;
 use MMX\Search\Models\Index;
-use MMX\Search\Models\IndexField;
+use MMX\Search\Models\IndexResource;
 use MODX\Revolution\modSystemEvent;
 use MODX\Revolution\modX;
 use Psr\Container\ContainerInterface;
@@ -217,7 +217,7 @@ class App
 
     protected function updateIndex(Resource $resource): void
     {
-        IndexField::query()->where('resource_id', $resource->id)->delete();
+        IndexResource::query()->where('resource_id', $resource->id)->delete();
         if ($resource->searchable && $resource->published && !$resource->deleted) {
             /** @var Index $index */
             foreach (Index::query()->where('context_key', $resource->context_key)->cursor() as $index) {
