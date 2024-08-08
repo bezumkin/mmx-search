@@ -4,9 +4,7 @@ namespace MMX\Search\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use MMX\Database\Models\Context;
 use MMX\Database\Models\Resource;
 
 /**
@@ -16,11 +14,11 @@ use MMX\Database\Models\Resource;
  * @property bool $prefix
  * @property float $fuzzy
  * @property string $context_key
+ * @property array $context_keys
  * @property bool $active
  * @property Carbon $created_at
  * @property Carbon $updated_at
  *
- * @property-read Context $context
  * @property-read IndexResource[] $resources
  */
 class Index extends Model
@@ -33,10 +31,11 @@ class Index extends Model
         'fuzzy' => 'float',
         'active' => 'bool',
     ];
+    protected $appends = ['context_keys'];
 
-    public function context(): BelongsTo
+    public function getContextKeysAttribute(): array
     {
-        return $this->belongsTo(Context::class, 'key', 'context_key');
+        return explode(',', $this->context_key);
     }
 
     public function resources(): HasMany
@@ -49,7 +48,7 @@ class Index extends Model
         $this->resources()->delete();
 
         $resources = Resource::query()
-            ->where('context_key', $this->context_key)
+            ->whereIn('context_key', $this->context_key)
             ->where('searchable', true)
             ->where('deleted', false)
             ->where('published', true)

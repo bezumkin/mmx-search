@@ -30,7 +30,7 @@
           <BLink
             v-for="(item, idx) in results"
             :key="idx"
-            :href="'/' + item.uri"
+            :href="item.uri"
             :class="{selected: selected === idx}"
             role="option"
             :aria-selected="String(selected === idx)"
@@ -202,7 +202,7 @@ function onKeydown(e: KeyboardEvent) {
     if (selected.value > -1) {
       const page = results.value[selected.value]
       if (page) {
-        document.location = '/' + page.uri
+        document.location = page.uri
       }
     }
   }

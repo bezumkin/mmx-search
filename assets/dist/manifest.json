@@ -1,64 +1,64 @@
 {
-  "_api-CKyfD95E.js": {
-    "file": "assets/api-CKyfD95E.js",
+  "_api-CqIDYqwN.js": {
+    "file": "assets/api-CqIDYqwN.js",
     "name": "api",
     "imports": [
-      "_vue-hfjAzT99.js"
+      "_vue-h8ADcOgw.js"
     ]
   },
-  "_vesp-HQBszzT3.js": {
-    "file": "assets/vesp-HQBszzT3.js",
+  "_vesp-C_CA5xdG.js": {
+    "file": "assets/vesp-C_CA5xdG.js",
     "name": "vesp",
     "imports": [
-      "_vue-bootstrap-CJ-2MBel.js",
-      "_vue-hfjAzT99.js",
-      "_vue-router-Cb_WVhdP.js",
-      "_api-CKyfD95E.js"
+      "_vue-bootstrap-DwyX2ekl.js",
+      "_vue-h8ADcOgw.js",
+      "_vue-router-Ca4Y1DuG.js",
+      "_api-CqIDYqwN.js"
     ]
   },
-  "_vue-bootstrap-CJ-2MBel.js": {
-    "file": "assets/vue-bootstrap-CJ-2MBel.js",
+  "_vue-bootstrap-DwyX2ekl.js": {
+    "file": "assets/vue-bootstrap-DwyX2ekl.js",
     "name": "vue-bootstrap",
     "imports": [
-      "_vue-hfjAzT99.js"
+      "_vue-h8ADcOgw.js"
     ]
   },
-  "_vue-hfjAzT99.js": {
-    "file": "assets/vue-hfjAzT99.js",
+  "_vue-h8ADcOgw.js": {
+    "file": "assets/vue-h8ADcOgw.js",
     "name": "vue"
   },
-  "_vue-router-Cb_WVhdP.js": {
-    "file": "assets/vue-router-Cb_WVhdP.js",
+  "_vue-router-Ca4Y1DuG.js": {
+    "file": "assets/vue-router-Ca4Y1DuG.js",
     "name": "vue-router",
     "imports": [
-      "_vue-hfjAzT99.js"
+      "_vue-h8ADcOgw.js"
     ]
   },
   "src/mgr.ts": {
-    "file": "assets/mgr-7tV1Buqc.js",
+    "file": "assets/mgr-DECgefuG.js",
     "name": "mgr",
     "src": "src/mgr.ts",
     "isEntry": true,
     "imports": [
-      "_vue-hfjAzT99.js",
-      "_vue-router-Cb_WVhdP.js",
-      "_vesp-HQBszzT3.js",
-      "_vue-bootstrap-CJ-2MBel.js",
-      "_api-CKyfD95E.js"
+      "_vue-h8ADcOgw.js",
+      "_vue-router-Ca4Y1DuG.js",
+      "_vesp-C_CA5xdG.js",
+      "_vue-bootstrap-DwyX2ekl.js",
+      "_api-CqIDYqwN.js"
     ],
     "css": [
       "assets/mgr-DZFTxvnu.css"
     ]
   },
   "src/web.ts": {
-    "file": "assets/web-CJjM8m1q.js",
+    "file": "assets/web-BpbtIHwE.js",
     "name": "web",
     "src": "src/web.ts",
     "isEntry": true,
     "imports": [
-      "_vue-hfjAzT99.js",
-      "_api-CKyfD95E.js",
-      "_vue-bootstrap-CJ-2MBel.js"
+      "_vue-h8ADcOgw.js",
+      "_api-CqIDYqwN.js",
+      "_vue-bootstrap-DwyX2ekl.js"
     ],
     "css": [
       "assets/web-CqL5p0yx.css"

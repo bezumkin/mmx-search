@@ -29,6 +29,8 @@ class Indexes extends ModelController
             return $this->failure('errors.index.title_unique');
         }
 
+        $record->context_key = implode(',', $this->getProperty('context_keys'));
+
         return null;
     }
 
@@ -46,10 +48,11 @@ class Indexes extends ModelController
         }
 
         $resources = Resource::query()
-            ->where('context_key', $index->context_key)
+            ->whereIn('context_key', $index->context_keys)
             ->where('searchable', true)
             ->where('deleted', false)
             ->where('published', true)
+            ->orderBy('id')
             ->with('TvValues', 'TvValues.Tv:id,name');
         $count = $resources->count();
         $resources->offset($offset);

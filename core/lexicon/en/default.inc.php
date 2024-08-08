@@ -12,6 +12,7 @@ $_tmp = [
         'submit' => 'Submit',
         'cancel' => 'Cancel',
         'delete' => 'Delete',
+        'select_context' => 'Select Context',
     ],
     'models' => [
         'index' => [
@@ -24,6 +25,7 @@ $_tmp = [
             'fuzzy' => 'Fuzzy Search',
             'fuzzy_desc' => 'Fuzzy search, in this example, with a max edit distance of 0.2 * term length, rounded to nearest integer. The misspelled "ismael" will match "ishmael".',
             'context_key' => 'Context',
+            'context_keys' => 'Contexts',
             'active' => 'Active',
             'fields' => 'Index Fields',
             'field' => 'Resource Field',

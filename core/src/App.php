@@ -104,7 +104,7 @@ class App
         $app->group(
             '/mgr',
             static function (RouteCollectorProxy $group) {
-                $group->any('/modx/contexts[/{key}]', Controllers\Mgr\Modx\Contexts::class);
+                $group->any('/contexts[/{key}]', Controllers\Mgr\Contexts::class);
 
                 $group->any('/version', Controllers\Mgr\Version::class);
                 $group->any('/indexes[/{id:\d+}]', Controllers\Mgr\Indexes::class);
@@ -220,8 +220,10 @@ class App
         IndexResource::query()->where('resource_id', $resource->id)->delete();
         if ($resource->searchable && $resource->published && !$resource->deleted) {
             /** @var Index $index */
-            foreach (Index::query()->where('context_key', $resource->context_key)->cursor() as $index) {
-                $index->indexResource($resource);
+            foreach (Index::query()->cursor() as $index) {
+                if (in_array($resource->context_key, $index->context_keys, true)) {
+                    $index->indexResource($resource);
+                }
             }
         }
     }

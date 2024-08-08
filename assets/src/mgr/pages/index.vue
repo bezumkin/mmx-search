@@ -4,6 +4,9 @@
       <i v-if="value" class="icon icon-check"></i>
       <i v-else class="icon icon-times"></i>
     </template>
+    <template #cell(context_keys)="{value}">
+      {{ value.join(', ') }}
+    </template>
     <RouterView />
     <BModal v-model="modalVisible" teleport-disabled hide-footer hide-header no-close-onbackdrop>
       <div class="text-center my-5">
@@ -26,7 +29,7 @@ const fields = computed(() => {
     {key: 'title', label: $t('models.index.title'), sortable: true},
     {key: 'prefix', label: $t('models.index.prefix'), sortable: true},
     {key: 'fuzzy', label: $t('models.index.fuzzy'), sortable: true},
-    {key: 'context_key', label: $t('models.index.context_key'), sortable: true},
+    {key: 'context_keys', label: $t('models.index.context_keys')},
     // {key: 'created_at', label: $t('models.index.created_at'), sortable: true, formatter: formatDate},
     // {key: 'updated_at', label: $t('models.index.updated_at'), sortable: true, formatter: formatDate},
   ]

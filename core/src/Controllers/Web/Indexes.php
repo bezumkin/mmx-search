@@ -42,10 +42,13 @@ class Indexes extends ModelGetController
         $data = $this->index->only('id', 'title', 'fields', 'boost', 'prefix', 'fuzzy');
         $data['pages'] = $this->index->resources()
             ->select('resource_id', 'parent_id', 'field', 'value')
-            ->with('Resource:id,pagetitle,menutitle,uri')
+            ->with('Resource:id,pagetitle,menutitle')
             ->with('Parent:id,pagetitle,menutitle')
             ->get()
             ->toArray();
+        foreach ($data['pages'] as &$page) {
+            $page['resource']['uri'] = $this->modx->makeUrl($page['resource_id'], '', '', 'full');
+        }
 
         return $this->success($data);
     }

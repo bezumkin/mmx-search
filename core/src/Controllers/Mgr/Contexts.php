@@ -1,6 +1,6 @@
 <?php
 
-namespace MMX\Search\Controllers\Mgr\Modx;
+namespace MMX\Search\Controllers\Mgr;
 
 use Illuminate\Database\Eloquent\Builder;
 use MMX\Database\Models\Context;

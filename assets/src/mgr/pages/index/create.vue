@@ -14,7 +14,7 @@ const record = ref({
   fields: [],
   prefix: true,
   fuzzy: 0.2,
-  context_key: '',
+  context_keys: [],
   active: true,
 })
 
@@ -23,11 +23,4 @@ const properties = {
   title: $t('models.index.title_one'),
   method: 'put',
 }
-
-try {
-  const contexts = await useGet('mgr/modx/contexts', {combo: true, sort: 'rank', limit: 1})
-  if (contexts.rows.length) {
-    record.value.context_key = contexts.rows[0].key
-  }
-} catch (e) {}
 </script>

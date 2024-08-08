@@ -4,15 +4,27 @@
       <BFormInput v-model="record.title" required />
     </BFormGroup>
 
-    <BFormGroup :label="$t('models.index.context_key')">
-      <MmxInputComboBox
-        v-model="record.context_key"
-        url="mgr/modx/contexts"
-        value-field="key"
-        text-field="name"
-        force-select
-        required
-      />
+    <BFormGroup :label="$t('models.index.context_keys')">
+      <input v-model="record.context_keys" style="display: none" required />
+      <BFormTags v-if="allContexts.length" v-model="record.context_keys" add-on-change no-outer-focus>
+        <template #default="{tags, inputAttrs, inputHandlers, removeTag}">
+          <BFormSelect
+            v-if="availableContexts.length > 0"
+            v-bind="inputAttrs"
+            :options="availableContexts"
+            v-on="inputHandlers"
+          >
+            <template #first>
+              <option disabled value="">{{ $t('actions.select_context') }}</option>
+            </template>
+          </BFormSelect>
+          <div v-if="tags.length > 0" class="d-flex flex-wrap my-2 gap-1">
+            <div v-for="tag in tags" :key="tag">
+              <BFormTag variant="info" @remove="removeTag(tag)">{{ tag }}</BFormTag>
+            </div>
+          </div>
+        </template>
+      </BFormTags>
     </BFormGroup>
 
     <BFormGroup :description="$t('models.index.field_desc')">
@@ -102,4 +114,23 @@ function onEnter(e: KeyboardEvent) {
     onAdd()
   }
 }
+
+const allContexts = ref<Record<string, any>[]>([])
+const availableContexts = computed(() => {
+  return allContexts.value.filter((i) => !record.value.context_keys.includes(i.value))
+})
+
+onMounted(async () => {
+  try {
+    const res = await useGet('mgr/contexts', {combo: true, sort: 'rank'})
+    res.rows.forEach((i: Record<string, any>) => {
+      if (i.key !== 'mgr') {
+        allContexts.value.push({text: i.name, value: i.key})
+        if (!record.value.id) {
+          record.value.context_keys.push(i.key)
+        }
+      }
+    })
+  } catch (e) {}
+})
 </script>
