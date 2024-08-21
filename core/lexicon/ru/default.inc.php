@@ -67,19 +67,14 @@ $_tmp = [
         'tplbtn' => 'Имя чанка для вывода кнопки поиска',
         'nocss' => 'Не загружать собранный CSS',
     ],
-    'errors' => [
-        'item' => [
-            'title_unique' => 'Заголовок предмета должен быть уникальным.',
-        ],
-    ],
 ];
 
 /** @var array $_lang */
 $_lang = array_merge($_lang, MMX\Search\App::prepareLexicon($_tmp, MMX\Search\App::NAMESPACE));
 
 $_tmp = [
-    'some-setting' => 'Какая-то настройка',
-    'some-setting_desc' => 'Описание какой-то настройки',
+//    'some-setting' => 'Какая-то настройка',
+//    'some-setting_desc' => 'Описание какой-то настройки',
 ];
 $_lang = array_merge($_lang, MMX\Search\App::prepareLexicon($_tmp, 'setting_' . MMX\Search\App::NAMESPACE));
 

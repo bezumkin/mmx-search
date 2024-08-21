@@ -67,19 +67,14 @@ $_tmp = [
         'tplbtn' => 'The name of chunk with search button',
         'nocss' => 'Do not load frontend styles',
     ],
-    'errors' => [
-        'item' => [
-            'title_unique' => 'The item title must be unique.',
-        ],
-    ],
 ];
 
 /** @var array $_lang */
 $_lang = array_merge($_lang, MMX\Search\App::prepareLexicon($_tmp, MMX\Search\App::NAMESPACE));
 
 $_tmp = [
-    'some-setting' => 'Setting title',
-    'some-setting_desc' => 'Some setting description',
+//    'some-setting' => 'Setting title',
+//    'some-setting_desc' => 'Some setting description',
 ];
 $_lang = array_merge($_lang, MMX\Search\App::prepareLexicon($_tmp, 'setting_' . MMX\Search\App::NAMESPACE));
 
