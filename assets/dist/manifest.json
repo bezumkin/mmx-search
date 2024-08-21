@@ -1,19 +1,19 @@
 {
-  "_api-CqIDYqwN.js": {
-    "file": "assets/api-CqIDYqwN.js",
+  "_api-CqsNYUFk.js": {
+    "file": "assets/api-CqsNYUFk.js",
     "name": "api",
     "imports": [
       "_vue-h8ADcOgw.js"
     ]
   },
-  "_vesp-C_CA5xdG.js": {
-    "file": "assets/vesp-C_CA5xdG.js",
+  "_vesp-Bb0nMcwX.js": {
+    "file": "assets/vesp-Bb0nMcwX.js",
     "name": "vesp",
     "imports": [
       "_vue-bootstrap-DwyX2ekl.js",
       "_vue-h8ADcOgw.js",
       "_vue-router-Ca4Y1DuG.js",
-      "_api-CqIDYqwN.js"
+      "_api-CqsNYUFk.js"
     ]
   },
   "_vue-bootstrap-DwyX2ekl.js": {
@@ -35,29 +35,29 @@
     ]
   },
   "src/mgr.ts": {
-    "file": "assets/mgr-DECgefuG.js",
+    "file": "assets/mgr-Wgj0UaWU.js",
     "name": "mgr",
     "src": "src/mgr.ts",
     "isEntry": true,
     "imports": [
       "_vue-h8ADcOgw.js",
       "_vue-router-Ca4Y1DuG.js",
-      "_vesp-C_CA5xdG.js",
+      "_vesp-Bb0nMcwX.js",
       "_vue-bootstrap-DwyX2ekl.js",
-      "_api-CqIDYqwN.js"
+      "_api-CqsNYUFk.js"
     ],
     "css": [
       "assets/mgr-DZFTxvnu.css"
     ]
   },
   "src/web.ts": {
-    "file": "assets/web-BpbtIHwE.js",
+    "file": "assets/web-CmTLm5EN.js",
     "name": "web",
     "src": "src/web.ts",
     "isEntry": true,
     "imports": [
       "_vue-h8ADcOgw.js",
-      "_api-CqIDYqwN.js",
+      "_api-CqsNYUFk.js",
       "_vue-bootstrap-DwyX2ekl.js"
     ],
     "css": [

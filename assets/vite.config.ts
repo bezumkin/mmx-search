@@ -26,4 +26,11 @@ export default withMmx('mmx-search', {
       },
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true,
+      },
+    },
+  },
 })
