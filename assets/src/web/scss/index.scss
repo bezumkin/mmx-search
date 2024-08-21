@@ -9,8 +9,7 @@ $input-focus-border-color: inherit;
 @import "bootstrap-scss/root";
 
 //@import "bootstrap-scss/bootstrap";
-#mmx-search-root {
-
+#mmx-search-modal {
   @import "bootstrap-scss/reboot";
   //@import "bootstrap-scss/grid";
   //@import "bootstrap-scss/containers";
@@ -25,10 +24,10 @@ $input-focus-border-color: inherit;
   @import "bootstrap-scss/transitions";
   @import "bootstrap-scss/helpers";
   @import "bootstrap-scss/utilities/api";
+  @import "bootstrap-scss/modal";
+
+  @import "search";
+  @import "icons";
 }
 
-@import "search";
-@import "icons";
-@import "bootstrap-scss/modal";
-@import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
 @import "@vesp/mmx-frontend/assets/toast";

@@ -1,5 +1,5 @@
 <template>
-  <BModal v-model="modalVisible" hide-footer hide-header teleport-disabled size="lg" @shown="onShown">
+  <BModal v-model="modalVisible" hide-footer hide-header teleport-to="#mmx-search-modal" size="lg" @shown="onShown">
     <template #default="{close}">
       <div class="search-form" @keydown="onKeydown">
         <div class="search-actions prepend">

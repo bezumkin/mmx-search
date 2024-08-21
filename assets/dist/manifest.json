@@ -51,7 +51,7 @@
     ]
   },
   "src/web.ts": {
-    "file": "assets/web-CmTLm5EN.js",
+    "file": "assets/web-CUDu61bK.js",
     "name": "web",
     "src": "src/web.ts",
     "isEntry": true,
@@ -61,7 +61,7 @@
       "_vue-bootstrap-DwyX2ekl.js"
     ],
     "css": [
-      "assets/web-CqL5p0yx.css"
+      "assets/web-CPMxdgWs.css"
     ]
   }
 }

@@ -76,6 +76,7 @@ class App
             'locale' => $locale,
             'lexicon' => $this->getLexicon($locale, ['search', 'errors']),
         ];
+        $this->modx->regClientHTMLBlock('<div id="mmx-search-modal"></div>');
         $this->modx->regClientHTMLBlock('<script>' . self::NAME . '=' . json_encode($data) . '</script>');
 
         return $wrapper . '<div id="mmx-search-root"></div>';
