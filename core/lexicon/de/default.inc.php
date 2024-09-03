@@ -2,17 +2,17 @@
 
 $_tmp = [
     'menu_name' => 'mmxSearch',
-    'menu_desc' => 'Bequeme Suche',
+    'menu_desc' => 'Komfortable Suche',
     'version' => [
-        'available' => '{version} verfügbar',
+        'available' => 'Version {version} verfügbar',
     ],
     'actions' => [
         'create' => 'Erstellen',
         'edit' => 'Bearbeiten',
-        'submit' => 'Einreichen',
-        'cancel' => 'Stornieren',
+        'submit' => 'Abschicken',
+        'cancel' => 'Abbrechen',
         'delete' => 'Löschen',
-        'select_context' => 'Wählen Sie Kontext aus',
+        'select_context' => 'Wählen Sie einen Kontext aus',
     ],
     'models' => [
         'index' => [
@@ -21,17 +21,17 @@ $_tmp = [
             'id' => 'Id',
             'title' => 'Titel',
             'prefix' => 'Präfixsuche',
-            'prefix_desc' => 'Präfixsuche (damit „moto“ mit „motorcycle“ übereinstimmt).',
-            'fuzzy' => 'Fuzzy-Suche',
-            'fuzzy_desc' => 'Fuzzy-Suche, in diesem Beispiel, mit einem maximalen Bearbeitungsabstand von 0,2 Begriffslängen, gerundet auf die nächste ganze Zahl. Das falsch geschriebene „ismael“ wird mit „ishmael“ übereinstimmen.',
+            'prefix_desc' => 'Präfixsuche (dann findet „moto“ auch „motorcycle“ übereinstimmt).',
+            'fuzzy' => 'Unscharf-Suche',
+            'fuzzy_desc' => 'Unscharf-Suche, in diesem Beispiel, mit einem maximalen Bearbeitungsabstand von 0,2 Begriffslängen, gerundet auf die nächste ganze Zahl. Das falsch geschriebene „ismael“ wird mit „ishmael“ übereinstimmen.',
             'context_key' => 'Kontext',
             'context_keys' => 'Kontexte',
             'active' => 'Aktiv',
             'fields' => 'Indexfelder',
             'field' => 'Ressourcenfeld',
-            'field_desc' => 'Bitte geben Sie den Namen des Ressourcenfelds oder der Vorlagenvariablen mit der Suchgewichtung ein.',
+            'field_desc' => 'Bitte geben Sie den Namen des Ressourcenfelds oder der Template-Variablen mit der Suchgewichtung ein.',
             'weight' => 'Feldgewicht',
-            'created_at' => 'Hergestellt in',
+            'created_at' => 'Erstallt am',
             'updated_at' => 'Aktualisiert am',
         ],
         'index_resource' => [
@@ -40,14 +40,14 @@ $_tmp = [
             'resource' => 'Ressource',
             'field' => 'Feld',
             'value' => 'Inhalt',
-            'created_at' => 'Hergestellt in',
+            'created_at' => 'Erstellt am',
             'updated_at' => 'Aktualisiert am',
         ],
     ],
     'components' => [
-        'no_data' => 'Nichts anzuzeigen',
+        'no_data' => 'Keine Resultate',
         'no_results' => 'Nichts gefunden',
-        'records' => 'Keine Aufzeichnungen | 1 Datensatz | {total} aufzeichnungen',
+        'records' => 'Keine Einträge | 1 Datensatz | {total} Einträge',
         'query' => 'Suche...',
         'delete' => [
             'title' => 'Bestätigung erforderlich',
@@ -59,13 +59,13 @@ $_tmp = [
         'reset' => 'Zurücksetzen',
         'close' => 'Schließen',
         'to_navigate' => 'navigieren',
-        'to_select' => 'zu wählen',
+        'to_select' => 'auszuwählen',
         'to_close' => 'schließen',
     ],
     'snippets' => [
-        'index' => 'Der Name des Suchindex',
+        'index' => 'Der Name des Suchindexes',
         'tplbtn' => 'Der Name des Blocks mit Suchschaltfläche',
-        'nocss' => 'Laden Sie keine Frontend-Stile',
+        'nocss' => 'Keine Frontend-Styles (CSS) laden',
     ],
 ];
 
